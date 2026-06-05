@@ -1,0 +1,43 @@
+# Build directories
+out/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# IDE
+.idea/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Visual Studio
+.vscode/
+*.vcxproj*
+*.sln
+Debug/
+Release/
+x64/
+x86/
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.lib
+*.a
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Vulkan SDK (keep source, ignore binaries)
+VulkanSdkInstall/
+
+# Dependencies (if not tracked)
+# glfw-3.3.8.bin.WIN64/
+# glm/
