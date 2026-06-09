@@ -32,8 +32,11 @@ endif()
 set(GLM_DIR "${CMAKE_SOURCE_DIR}/glm")
 target_include_directories(MyPBR PRIVATE "${GLM_DIR}")
 
-# --- Vulkan SDK (本地打包) ---
-set(VULKAN_DIR "${CMAKE_SOURCE_DIR}/VulkanSdkInstall")
+# --- Vulkan SDK (使用环境变量) ---
+set(VULKAN_DIR "$ENV{VULKAN_SDK}")
+if(NOT VULKAN_DIR)
+    message(FATAL_ERROR "VULKAN_SDK 环境变量未设置")
+endif()
 target_include_directories(MyPBR PRIVATE "${VULKAN_DIR}/Include")
 target_link_directories(MyPBR PRIVATE "${VULKAN_DIR}/Lib")
 target_link_libraries(MyPBR PRIVATE vulkan-1)
