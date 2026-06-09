@@ -28,16 +28,8 @@ x86/
 *.dylib
 *.o
 *.obj
-*.lib
 *.a
 
 # Precompiled headers
 *.gch
 *.pch
-
-# Vulkan SDK (keep source, ignore binaries)
-VulkanSdkInstall/
-
-# Dependencies (if not tracked)
-# glfw-3.3.8.bin.WIN64/
-# glm/

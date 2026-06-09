@@ -23,6 +23,11 @@ endif()
 target_link_directories(MyPBR PRIVATE "${GLFW_LIB_DIR}")
 target_link_libraries(MyPBR PRIVATE glfw3)
 
+# 消除 MSVCRT 运行时库冲突警告
+if(MSVC)
+    set_target_properties(MyPBR PROPERTIES LINK_FLAGS "/NODEFAULTLIB:MSVCRT")
+endif()
+
 # --- GLM ---
 set(GLM_DIR "${CMAKE_SOURCE_DIR}/glm")
 target_include_directories(MyPBR PRIVATE "${GLM_DIR}")
